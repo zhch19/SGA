@@ -42,7 +42,7 @@ We used ResNet101 pretrained on the ImageNet in our experiments. You can downloa
 
 * Train SGA with all components(self-guided adversarial loss, hardness loss, self-guided progressive sampling)
 ```
- CUDA_VISIBLE_DEVICES=$GPU_ID python trainval_net_auto_self_pace.py\
+ CUDA_VISIBLE_DEVICES=$GPU_ID python trainval_net_auto_self_pace.py \
                     --dataset source_dataset --dataset_t target_dataset --net res101 \
                     --cuda
 ```
