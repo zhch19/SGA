@@ -30,6 +30,7 @@ We used ResNet101 pretrained on the ImageNet in our experiments. You can downloa
 
 * Pascal VOC to WaterColor(Res101-based): [GoogleDrive](https://drive.google.com/open?id=1bDjEkJCjz2DHP90ATUQL5wVwD4Qmq2fF)
 * Cityscape to KITTI(Res101-based): [GoogleDrive](https://drive.google.com/open?id=1WJEOWzaM6T5mBimaQniPxb62ipEoaOz5)
+* Cityscape to Foggycityscape(Res101-based): [GoogleDrive](https://drive.google.com/open?id=1XJdJHRLYUi6XxJWkm1MZQwEBEeTtQszS)
 
 ## Train
 * SGA-H
