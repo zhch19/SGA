@@ -17,7 +17,7 @@ The implementation is built on the pytorch implementation of Faster RCNN [faster
 * **Night-time(Detrac-night)**: TBA.
 * **Citysscape, FoggyCityscape**: Please refer [Cityscape](https://www.cityscapes-dataset.com/).
 
-### All codes are written to fit for the format of PASCAL_VOC.
+### All codes are written to fit for the Date format of Pascal VOC.
 
 ### Pretrained Model
 
