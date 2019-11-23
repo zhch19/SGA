@@ -109,7 +109,6 @@ if __name__ == '__main__':
 
     # initilize the network here.
     from model.faster_rcnn.vgg16_global_local import vgg16
-    ## from model.faster_rcnn.resnet_global_local import resnet
     from model.faster_rcnn.resnet_auto import resnet
 
     if args.net == 'vgg16':
@@ -294,7 +293,7 @@ if __name__ == '__main__':
                     logger.add_scalars("logs_s_{}/mmd_ori".format(args.session), info,
                                       (epoch - 1) * iters_per_epoch + step)
 
-####################################################### Computed D feature is only for observing in our experiments ###################################
+####################### Computed D feature is only for observing in our experiments ###################################
             # calculate mmd for D feature
             mmd_feat1 = MMD(mmd_feat1_s, mmd_feat1_t)
             mmd_feat2 = MMD(mmd_feat2_s, mmd_feat2_t)
@@ -310,7 +309,7 @@ if __name__ == '__main__':
                     }
                     logger.add_scalars("logs_s_{}/mmd".format(args.session), info,
                                       (epoch - 1) * iters_per_epoch + step)
-######################################################################################################################################################
+#######################################################################################################################
 
 	   
 	
@@ -335,13 +334,6 @@ if __name__ == '__main__':
             dloss_t_feat2 = 0.5 * FL2(domain_p_feat2_t, domain_t)
             dloss_t_feat3 = 0.5 * FL3(domain_p_feat3_t, domain_t)
 	   
-	    pre_domain_s = torch.max(F.softmax(domain_p_feat3_s))
-	    if pre_domain_s <= 0.55:
-		error_count += 1
-	   
-	    pre_domain_t = torch.max(F.softmax(domain_p_feat3_t))
-	    if pre_domain_t <= 0.55:
-		error_count += 1
 
             loss  += ( dloss_s_feat1 + dloss_s_feat2 + dloss_s_feat3 + dloss_t_feat1 + dloss_t_feat2 + dloss_t_feat3 +  mmd_ori_avg * 0.25)
 	    mmd_record.append(copy.deepcopy(mmd_ori_avg.data))
@@ -353,6 +345,7 @@ if __name__ == '__main__':
                 optimizer.zero_grad()
                 learning_iter += 1
 		learning_iter_per_epoch += 1
+		# Adjust Learning rate
                 if learning_iter % 60000 == 0 and learning_iter != 0:
                     adjust_learning_rate(optimizer, args.lr_decay_gamma)
                     lr *= args.lr_decay_gamma
@@ -436,39 +429,11 @@ if __name__ == '__main__':
 
                 loss_temp = 0
                 start = time.time()
-        error_rate = float(error_count) / 20000.0
-	error.append(copy.deepcopy(error_rate))
-	print(error)
+
         mmd_record.sort()
-        print(len(mmd_record))
-	if save_count <= 1:
-          rank =  int(round(0.5* len(mmd_record)))
-	else:
-	  rank = int(round(0.5 * len(mmd_record)))
-        print(rank)
-        if len(mmd_record) == 0 or (rank == 0):
-          thresh == 2.5
-          print('error')
-        elif rank >= len(mmd_record):
-	  thresh = 2.5
-	else:
-          thresh = mmd_record[rank]
-        if thresh == 0:
-          thresh = 5
-	print(thresh)
-        alpha.append(copy.deepcopy(thresh))
-	print(alpha)
+	rank = int(round(0.5 * len(mmd_record)))
+        thresh = mmd_record[rank]
         print_item = 'There are ' + str(learning_iter_per_epoch) + ' sample pairs are involved in training in this epoch'
         print(print_item)
-
-    #feat_1_npy = np.array(feat_1)
-    #feat_2_npy = np.array(feat_2)
-    #feat_3_npy = np.array(feat_3)
-    #mmd_avg_npy = np.array(mmd_avg_value)
-
-    #np.save('/home/lzx/dgx-code/ori_code/analysis/cityscape/SGA1/record_analysis/feat_1.npy', feat_1_npy)
-    #np.save('/home/lzx/dgx-code/ori_code/analysis/cityscape/SGA1/record_analysis/feat_2.npy', feat_2_npy)
-    #np.save('/home/lzx/dgx-code/ori_code/analysis/cityscape/SGA1/record_analysis/feat_3.npy', feat_3_npy)
-    #np.save('/home/lzx/dgx-code/ori_code/analysis/cityscape/SGA1/record_analysis/mmd.npy', mmd_avg_npy)
     if args.use_tfboard:
         logger.close()
