@@ -33,8 +33,9 @@ We used ResNet101 pretrained on the ImageNet in our experiments. You can downloa
 * Cityscape to Foggycityscape(Res101-based): [GoogleDrive](https://drive.google.com/open?id=1XJdJHRLYUi6XxJWkm1MZQwEBEeTtQszS)
 
 ### Train
-* SGA-H
+* Train SGA with Self-guided adversarial loss and hardness loss:
 ```
  CUDA_VISIBLE_DEVICES=$GPU_ID python trainval_net_auto.py \
                     --dataset source_dataset --dataset_t target_dataset --net res101 \
                     --cuda
+     
