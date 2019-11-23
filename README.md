@@ -2,7 +2,7 @@
 
 ### Acknowledgment
 
-The implementation is built on the pytorch implementation of Faster RCNN [faster-rcnn repository](https://github.com/jwyang/faster-rcnn.pytorch) to set up the environment
+The implementation is built on the pytorch implementation of Faster RCNN [faster-rcnn repository](https://github.com/jwyang/faster-rcnn.pytorch), please refer the original project to set up the environment.
 
 ### Prerequisites
 
