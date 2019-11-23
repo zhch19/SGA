@@ -12,7 +12,7 @@ Please Follow [faster-rcnn repository](https://github.com/jwyang/faster-rcnn.pyt
 
 * **PASCAL_VOC 07+12**: Please refer [py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn#beyond-the-demo-installation-for-training-and-testing-models) for constructing PASCAL VOC Datasets.
 * **WaterColor**: Please refer [Cross Domain Detection ](https://github.com/naoto0804/cross-domain-detection/tree/master/datasets). 
-* **Nigti-time(Detrac-night)**: TBA.
+* **Night-time(Detrac-night)**: TBA.
 * **CitysScape, FoggyCityscape**: Please refer [Cityscape](https://www.cityscapes-dataset.com/).
 
 ### All codes are written to fit for the format of PASCAL_VOC.
