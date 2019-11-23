@@ -16,7 +16,7 @@ The implementation is built on the pytorch implementation of [faster-rcnn.pytorc
 * **WaterColor**: Please refer [Cross Domain Detection ](https://github.com/naoto0804/cross-domain-detection/tree/master/datasets). 
 * **Night-time(Detrac-night)**: TBA.
 * **Citysscape, FoggyCityscape**: Please refer [Cityscape](https://www.cityscapes-dataset.com/).
-* **KITTI**: Please refer [KTIIT](http://www.cvlibs.net/datasets/kitti/raw_data.php?type=residential)
+* **KITTI**: Please refer [KITTI](http://www.cvlibs.net/datasets/kitti/raw_data.php?type=residential)
 
 ### All codes are written to fit for the Data format of Pascal VOC.
 
