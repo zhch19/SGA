@@ -16,7 +16,7 @@ The implementation is built on the pytorch implementation of [faster-rcnn.pytorc
 * **WaterColor**: Please refer [Cross Domain Detection ](https://github.com/naoto0804/cross-domain-detection/tree/master/datasets). 
 * **Night-time(Detrac-night)**: TBA.
 * **Citysscape, FoggyCityscape**: Please refer [Cityscape](https://www.cityscapes-dataset.com/).
-* **KITTI**: Please refer[KTIIT](http://www.cvlibs.net/datasets/kitti/raw_data.php?type=residential)
+* **KITTI**: Please refer [KTIIT](http://www.cvlibs.net/datasets/kitti/raw_data.php?type=residential)
 
 ### All codes are written to fit for the Date format of Pascal VOC.
 
@@ -29,9 +29,10 @@ We used ResNet101 pretrained on the ImageNet in our experiments. You can downloa
 
 ### Well-trained Domain Adaptation Object Detection Models
 
-* Pascal VOC to WaterColor(Res101-based): [GoogleDrive](https://drive.google.com/open?id=1bDjEkJCjz2DHP90ATUQL5wVwD4Qmq2fF)
 * Cityscape to KITTI(Res101-based): [GoogleDrive](https://drive.google.com/open?id=1WJEOWzaM6T5mBimaQniPxb62ipEoaOz5)
+* KITTI to Cityscape(Res101-based): [GoogleDrive](https://drive.google.com/open?id=1436aIDyv8xXf8pjlfUxK6J69nN6aeMRb)
 * Cityscape to Foggycityscape(Res101-based): [GoogleDrive](https://drive.google.com/open?id=1XJdJHRLYUi6XxJWkm1MZQwEBEeTtQszS)
+* Pascal VOC to WaterColor(Res101-based): [GoogleDrive](https://drive.google.com/open?id=1bDjEkJCjz2DHP90ATUQL5wVwD4Qmq2fF)
 * Daytime(Cityscape) to Night-time(Detrac-Night) (Res101-based): [GoogleDrive](https://drive.google.com/open?id=1ZAhVHfI4sP4jotUQfc96qWIyChp2LXK_)
 
 ### Train
