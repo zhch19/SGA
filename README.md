@@ -23,6 +23,9 @@ We used ResNet101 pretrained on the ImageNet in our experiments. You can downloa
 
 * ResNet101: [Dropbox](https://www.dropbox.com/s/iev3tkbz5wyyuz9/resnet101_caffe.pth?dl=0), [VT Server](https://filebox.ece.vt.edu/~jw2yang/faster-rcnn/pretrained-base-models/resnet101_caffe.pth)
 
+#### Well-trained Domain Adaptation Object Detection Models
+
+* Pascal VOC to WaterColor(Res101-based): [GoogleDrive](https://drive.google.com/open?id=1bDjEkJCjz2DHP90ATUQL5wVwD4Qmq2fF
 
 ## Train
 * SGA-H
