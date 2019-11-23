@@ -15,3 +15,4 @@ Please Follow [faster-rcnn repository](https://github.com/jwyang/faster-rcnn.pyt
 * **Nigti-time(Detrac-night)**: TBA.
 * **CitysScape, FoggyCityscape**: Please refer [Cityscape](https://www.cityscapes-dataset.com/).
 
+### All codes are written to fit for the format of PASCAL_VOC.
