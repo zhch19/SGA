@@ -22,3 +22,11 @@ Please Follow [faster-rcnn repository](https://github.com/jwyang/faster-rcnn.pyt
 We used ResNet101 pretrained on the ImageNet in our experiments. You can download the model from:
 
 * ResNet101: [Dropbox](https://www.dropbox.com/s/iev3tkbz5wyyuz9/resnet101_caffe.pth?dl=0), [VT Server](https://filebox.ece.vt.edu/~jw2yang/faster-rcnn/pretrained-base-models/resnet101_caffe.pth)
+
+
+## Train
+* SGA-H
+```
+ CUDA_VISIBLE_DEVICES=$GPU_ID python trainval_net_auto.py \
+                    --dataset source_dataset --dataset_t target_dataset --net res101 \
+                    --cuda
